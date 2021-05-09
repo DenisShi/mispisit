@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MISP.Product">
+    <Position X="8" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAgAAAAAAAAAAQAAAAAABAAAAAAAAAACAA=</HashCode>
+      <FileName>Models\Product.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MISP.AuthUser">
+    <Position X="3.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAACAAAAIAAAIAA=</HashCode>
+      <FileName>Models\AuthUser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MISP.Order">
+    <Position X="8" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAEAAAAAAAAAABAABAAAAAAAAAAAAAAEAEAIAQ=</HashCode>
+      <FileName>Models\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Operator" />
+      <Property Name="Client" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MISP.LoginModel">
+    <Position X="3.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAIAAAAAA=</HashCode>
+      <FileName>Models\AuthModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MISP.RegisterModel">
+    <Position X="1.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAACAAAAIAAAAAA=</HashCode>
+      <FileName>Models\AuthModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MISP.Cart">
+    <Position X="11.75" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAEAAAAAAAAAAAgAAAAAAAAAAAAABEAAA=</HashCode>
+      <FileName>Models\Cart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MISP.CartLine">
+    <Position X="13.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Models\CartLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MISP.Catalog">
+    <Position X="11.75" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Catalog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MISP.AnonUser">
+    <Position X="1.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAACAAAAIAAAAAA=</HashCode>
+      <FileName>Models\AnonUser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MISP.Operator">
+    <Position X="5.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBCAAAAAAAAAAAAAAEAAAQAAAAAAAAAAAAQIAAAAAA=</HashCode>
+      <FileName>Operator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MISP.Controllers.OrderController">
+    <Position X="8" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAQABAAAAAAAAAAAAAAAAAAAEAAAAAACAA=</HashCode>
+      <FileName>Controllers\OrderController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MISP.Controllers.CatalogController">
+    <Position X="13.75" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAABAIAAAAA=</HashCode>
+      <FileName>Controllers\CatalogController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MISP.Controllers.CartController">
+    <Position X="13.75" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAABAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\CartController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="MISP.IDomainObject">
+    <Position X="3.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\IDomainObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MISP.IUser">
+    <Position X="3.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAACAAAAIAAAAAA=</HashCode>
+      <FileName>Models\IUser.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MISP.IProduct">
+    <Position X="5.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\IProduct.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="MISP.FoodCategories">
+    <Position X="9.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Models\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MISP.OrderStatuses">
+    <Position X="9.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAIAgAAAAAAAAAAAAAQAEAAAAACAAAA=</HashCode>
+      <FileName>Models\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
