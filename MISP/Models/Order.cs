@@ -37,7 +37,8 @@ namespace MISP
 
         public void Update()
         {
-            Status = OrderStatuses.
+            //Status = OrderStatuses.
+
         }
     }
 }

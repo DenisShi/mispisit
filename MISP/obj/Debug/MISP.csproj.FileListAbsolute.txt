@@ -83,3 +83,4 @@ C:\Users\Denis111\Desktop\MISP\MISP\MISP\obj\Debug\MISP.csproj.CoreCompileInputs
 C:\Users\Denis111\Desktop\MISP\MISP\MISP\obj\Debug\MISP.csproj.CopyComplete
 C:\Users\Denis111\Desktop\MISP\MISP\MISP\obj\Debug\MISP.dll
 C:\Users\Denis111\Desktop\MISP\MISP\MISP\obj\Debug\MISP.pdb
+C:\Users\Denis111\Desktop\MISP\MISP\MISP\bin\MISP.dll.config
