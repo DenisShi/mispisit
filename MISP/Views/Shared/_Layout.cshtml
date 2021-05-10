@@ -5,39 +5,68 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - приложение ASP.NET</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Имя приложения", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Информация", "About", "Home")</li>
-                    <li>@Html.ActionLink("Связаться", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - мое приложение ASP.NET</p>
-        </footer>
-    </div>
+    <div class="page">
+   
+        <header class="header">
+            @if (IsSectionDefined("Header"))
+            {
+                @RenderSection("Header")
+            }
+            else
+            {
+                <nav class="navbar navbar-expand-lg fixed-top py-3">
+                    <div class="container">
+                        <a href="#" class="navbar-brand text-uppercase font-weight-bold">Шаурма с душой</a>
+                        <button type="button" onclick="transparentNavbarButton()" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars" ria-hidden="true"></i></button>
+                        <div id="navbarSupportedContent" class="collapse navbar-collapse ">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold">Акции</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Карьера</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">О нас</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Войти</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            }
+        </header>
+        
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+
+        @RenderBody()
+
+
+        <footer class="footer">
+            @if (IsSectionDefined("Footer"))
+            {
+                @RenderSection("Footer")
+            }
+            else
+            {
+                <div class="container">
+                    <div class="item row">
+                        <div class="left col-8">
+                            <p class="lead">Шаурма с душой © 2011-2021</p>
+                        </div>
+                        <div class="right col-4">
+                            <i class="fa fa-vk fa-2x" aria-hidden="true"></i>
+                            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                            <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            }
+        </footer>
+
+
+    </div>
+    <script src="https://kit.fontawesome.com/0747137cf0.js" crossorigin="anonymous"></script>
+    <script src="~/Scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/transparentNavbar.js"></script>
 </body>
 </html>

@@ -1,0 +1,91 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+.body{
+    background-color: #fff;
+}
+
+.header {
+    height:10vh;
+
+    .navbar .nav-link {
+        color: black;
+    }
+    
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .navbar .navbar-brand {
+        color: black;
+    }
+    
+    
+    /* Change navbar styling on scroll */
+    .navbar.active {
+        background: #000;
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar.active .nav-link {
+        color: #fff;
+    }
+    
+    .navbar.active .nav-link:hover,
+    .navbar.active .nav-link:focus {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .navbar.active .navbar-brand {
+        color: #fff;
+    }
+    
+    .fa.fa-bars.active {
+        color: #fff;
+    }  
+}
+
+.main{
+
+    margin-left: auto;
+    margin-right: auto;
+
+    .scroll{
+        height: 500px;
+        .d-block,
+        .carousel-control-prev,
+        .carousel-control-next{
+            height: 80%;
+        }
+
+        .carousel-indicators{
+            height: 10%;
+        }
+    }
+
+    .carousel-indicators li{
+        background-color: #000;
+    }
+
+}
+
+.footer{
+    background-color:#000;
+    color: #fff;
+    .item{
+        .right, p, i{
+            text-align: right !important;
+            vertical-align: middle !important; 
+        }
+        .left, p, i{
+            text-align: left !important;
+            vertical-align: middle !important; 
+        }
+    }
+}
