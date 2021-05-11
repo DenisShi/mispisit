@@ -256,3 +256,7 @@ C:\Users\Denis111\Desktop\Proj\mispisit\MISP\obj\Debug\MISP.csproj.CoreCompileIn
 C:\Users\Denis111\Desktop\Proj\mispisit\MISP\obj\Debug\MISP.csproj.CopyComplete
 C:\Users\Denis111\Desktop\Proj\mispisit\MISP\obj\Debug\MISP.dll
 C:\Users\Denis111\Desktop\Proj\mispisit\MISP\obj\Debug\MISP.pdb
+C:\Users\Denis111\Desktop\Proj\mispisit\MISP\bin\EntityFramework.dll
+C:\Users\Denis111\Desktop\Proj\mispisit\MISP\bin\EntityFramework.SqlServer.dll
+C:\Users\Denis111\Desktop\Proj\mispisit\MISP\bin\EntityFramework.xml
+C:\Users\Denis111\Desktop\Proj\mispisit\MISP\bin\EntityFramework.SqlServer.xml
