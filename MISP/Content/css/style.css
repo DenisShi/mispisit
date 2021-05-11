@@ -105,19 +105,22 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-.main .scroll {
+.main .list-carousel .scroll {
   height: 500px;
 }
-.main .scroll .d-block,
-.main .scroll .carousel-control-prev,
-.main .scroll .carousel-control-next {
+.main .list-carousel .scroll .d-block,
+.main .list-carousel .scroll .carousel-control-prev,
+.main .list-carousel .scroll .carousel-control-next {
   height: 80%;
 }
-.main .scroll .carousel-indicators {
+.main .list-carousel .scroll .carousel-indicators {
   height: 10%;
 }
-.main .carousel-indicators li {
+.main .list-carousel .carousel-indicators li {
   background-color: #000;
+}
+.main .catalog .title {
+  text-align: center;
 }
 
 .footer {
