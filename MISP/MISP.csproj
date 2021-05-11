@@ -120,10 +120,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Catalog.cs" />
+    <Compile Include="Models\Catalog.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CatalogController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Models\Repository.cs" />
     <Compile Include="Operator.cs" />
     <Compile Include="Models\CartLine.cs" />
     <Compile Include="Models\Cart.cs" />
