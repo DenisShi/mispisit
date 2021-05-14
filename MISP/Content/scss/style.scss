@@ -4,92 +4,116 @@
 @import 'libs';
 @import 'global';
 
-.body{
+.body {
     background-color: #fff;
 }
 
 .header {
-    height: 10vh;
-    .navbar .nav-link {
-        color: black;
-    }
-
-    .navbar .nav-link:hover,
-    .navbar .nav-link:focus {
-        color: black;
-        text-decoration: none;
-    }
-
-    .navbar .navbar-brand {
-        color: black;
-    }
-    /* Change navbar styling on scroll */
-    .navbar.active {
-        background: #000;
-        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .navbar.active .nav-link {
-        color: #fff;
-    }
-
-    .navbar.active .nav-link:hover,
-    .navbar.active .nav-link:focus {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .navbar.active .navbar-brand {
-        color: #fff;
-    }
-
-    .fa.fa-bars.active {
+    &__content {
+        height: 30vh;
+        background: #1abc9c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: #fff;
     }
 }
 
-.main {
-    margin-left: auto;
-    margin-right: auto;
+.menu {
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1;
 
-    .list-carousel {
-        .scroll {
-            height: 500px;
-
-            .d-block,
-            .carousel-control-prev,
-            .carousel-control-next {
-                height: 80%;
-            }
-
-            .carousel-indicators {
-                height: 10%;
-            }
-        }
-
-        .carousel-indicators li {
-            background-color: #000;
-        }
+    &__content-left a {
+        float: left;
+        color: white;
+        display: block;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
     }
 
-    .catalog {
-        .title {
-            text-align: center;
-        }
+    &__content-right a {
+        float: right;
+        text-align:center;
     }
-} 
 
-.footer{
-    background-color:#000;
+    &__content-left a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    &__content-left a.active {
+        background-color: #666;
+        color: white;
+    }
+}
+
+
+.home_slider {
+    margin-top: 30px;
+
+    &__block {
+        height: 350px;
+    }
+
+    &__indicators {
+        height: 10%;
+        align-content: end;
+    }
+
+    &__indicators li {
+        background-color: #000;
+        height: 4px;
+        width: 45px;
+    }
+
+    &__content {
+        height: 88%;
+    }
+
+    &__content-item {
+        height: 100%;
+    }
+
+    &__arrow {
+        align-content: center;
+    }
+
+    &__arrow i {
+        background: rgba(0,0,0,0.2);
+        z-index: 100;
+        border-radius: 50%;
+        padding: 10px 13px;
+        cursor: pointer;
+    }
+}
+
+
+.catalog {
+
+    &__title {
+        text-align: center;
+    }
+
+    &__content {
+    }
+}
+
+
+.footer {
+    background-color: #000;
     color: #fff;
-    .item{
-        .right, p, i{
-            text-align: right !important;
-            vertical-align: middle !important; 
-        }
-        .left, p, i{
-            text-align: left !important;
-            vertical-align: middle !important; 
-        }
+    height: 8vh;
+
+    &__content-left {
+        text-align: left;
+    }
+
+    &__content-right {
+        text-align: right;
     }
 }

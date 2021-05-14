@@ -5,65 +5,78 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - приложение ASP.NET</title>
-    <link rel="stylesheet" href="~/Content/css/style.css">
     <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/css/style.css">
 </head>
 <body>
-    <div class="page">
-   
-        <header class="header">
-            @if (IsSectionDefined("Header"))
-            {
-                @RenderSection("Header")
-            }
-            else
-            {
-                <nav class="navbar navbar-expand-lg fixed-top py-3">
-                    <div class="container">
-                        <a href="#" class="navbar-brand text-uppercase font-weight-bold">Шаурма с душой</a>
-                        <button type="button" onclick="transparentNavbarButton()" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars" ria-hidden="true"></i></button>
-                        <div id="navbarSupportedContent" class="collapse navbar-collapse ">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold">Акции</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Карьера</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">О нас</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Войти</a></li>
-                            </ul>
+
+
+    @if (IsSectionDefined("Header"))
+    {
+        @RenderSection("Header")
+    }
+    else
+    {
+    }
+
+    @if (IsSectionDefined("Menu"))
+    {
+        @RenderSection("Menu")
+    }
+    else
+    {
+        <header class="menu">
+            <div class="menu__content container">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="menu__content-left">
+                            <a href="#" class="active">Главная</a>
+                            <a href="#">Акции</a>
+                            <a href="#">Каталог</a>
+                            <a href="#">Контакты</a>
                         </div>
                     </div>
-                </nav>
-            }
+                    <div class="col-4">
+                        <div class="menu__content-right">
+                            <a href="#">+796786756</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
-        
+    }
 
+
+
+    <div class="page">
 
         @RenderBody()
 
 
-        <footer class="footer">
-            @if (IsSectionDefined("Footer"))
-            {
-                @RenderSection("Footer")
-            }
-            else
-            {
-                <div class="container">
-                    <div class="item row">
-                        <div class="col-8 float-left">
+        @if (IsSectionDefined("Footer"))
+        {
+            @RenderSection("Footer")
+        }
+        else
+        {
+            <footer class="footer">
+                <div class="footer__content container ">
+                    <div class="row">
+                        <div class="footer__content-left col-8 center-block">
                             <p class="lead">Шаурма с душой © 2011-2021</p>
                         </div>
-                        <div class="col-4 float-right text-right">
-                            <i class="fa fa-vk fa-2x" aria-hidden="true"></i>
-                            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
-                            <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+                        <div class="footer__content-right col-4 center-block">
+                            <i class="fa fa-vk fa-3x" aria-hidden="true"></i>
+                            <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+                            <i class="fa fa-youtube-play fa-3x" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
-            }
-        </footer>
-
-
+            </footer>
+        }
     </div>
+
+
     <script src="https://kit.fontawesome.com/0747137cf0.js" crossorigin="anonymous"></script>
     <script src="~/Scripts/jquery-3.3.1.slim.min.js"></script>
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>

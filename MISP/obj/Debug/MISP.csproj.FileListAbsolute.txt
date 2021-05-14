@@ -260,3 +260,7 @@ C:\Users\Denis111\Desktop\Proj\mispisit\MISP\bin\EntityFramework.dll
 C:\Users\Denis111\Desktop\Proj\mispisit\MISP\bin\EntityFramework.SqlServer.dll
 C:\Users\Denis111\Desktop\Proj\mispisit\MISP\bin\EntityFramework.xml
 C:\Users\Denis111\Desktop\Proj\mispisit\MISP\bin\EntityFramework.SqlServer.xml
+D:\Projects\shawarma\mispisit\MISP\bin\EntityFramework.dll
+D:\Projects\shawarma\mispisit\MISP\bin\EntityFramework.SqlServer.dll
+D:\Projects\shawarma\mispisit\MISP\bin\EntityFramework.xml
+D:\Projects\shawarma\mispisit\MISP\bin\EntityFramework.SqlServer.xml
