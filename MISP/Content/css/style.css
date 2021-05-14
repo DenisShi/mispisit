@@ -173,5 +173,8 @@ body {
   align-items: center;
   justify-content: flex-end;
 }
+.footer__content-right i {
+  margin-left: 6px;
+}
 
 /*# sourceMappingURL=style.css.map */
