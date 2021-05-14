@@ -12,6 +12,7 @@
 
 <body>
 
+<<<<<<< HEAD
     @section Header{
         <div class="header">
             <div class="header__content">
@@ -19,6 +20,12 @@
             </div>
         </div>
     }
+=======
+        @for(int i = 0; i < ViewBag.Categories.Count; i++)
+        {
+        <p>@ViewBag.Categories[i].ToString();</p>
+        }
+>>>>>>> 7066f62585ba013c197f541ddd8196a09dd19a72
     <main class="main">
 
         <div class="home_slider">

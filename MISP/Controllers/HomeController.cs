@@ -11,8 +11,10 @@ namespace MISP.Controllers
     {
         public ActionResult Index()
         {
-            UnitOfWork unit = new UnitOfWork();
-            return View();
+            //UnitOfWork unit = new UnitOfWork();
+            ViewBag.Categories = Enum.GetValues(typeof(FoodCategories)).Cast<FoodCategories>().ToList();
+
+            return View(Enum.GetValues(typeof(FoodCategories)).Cast<FoodCategories>().ToList());
         }
 
         public ActionResult About()
