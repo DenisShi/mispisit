@@ -12,26 +12,26 @@
 
 <body>
 
-<<<<<<< HEAD
     @section Header{
         <div class="header">
-            <div class="header__content">
-                <p>Шаурма с душой</p>
+            <div class="header__content container">
+                <div class="row">
+                    <div class="header__content-title col-12">
+                        <h1>Шаурма с душой</h1>
+                    </div>
+                </div>
+                <div class="header__content-description ccol-12">
+                    <p>Делаем с любовью</p>
+                </div>
             </div>
         </div>
     }
-=======
-        @for(int i = 0; i < ViewBag.Categories.Count; i++)
-        {
-        <p>@ViewBag.Categories[i].ToString();</p>
-        }
->>>>>>> 7066f62585ba013c197f541ddd8196a09dd19a72
-    <main class="main">
 
+    <main class="main">
         <div class="home_slider">
-            <div class="container">
-                <div class="col-12">
-                    <div class="row">
+            <div class="home_slider__position container">
+                <div class="row">
+                    <div class="col-12">
                         <div id="carouselIndicators" class="home_slider__block carousel slide" data-ride="carousel">
                             <ol class="home_slider__indicators carousel-indicators">
                                 <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
@@ -49,14 +49,14 @@
                                     <img class="home_slider__content-item d-block" src="~/Content/images/small_item_3390.jpg" alt="Третий слайд">
                                 </div>
                                 <a class="home_slider__arrow carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-                                <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="home_slider__arrow carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-                                <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
-                                <span class="sr-only">Next</span>
-                            </a>
-                            </div>                         
+                                    <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="home_slider__arrow carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                                    <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -64,16 +64,12 @@
         </div>
 
         <div class="catalog">
-            <div class="catalog__title container">
-                <div class="row">
-                    <div class="col-12">
-                        <p> Наше меню </p>
-                    </div>
-                </div>
-            </div>
             <div class="catalog__content container">
                 <div class="row">
-                    <div class="col">
+                    <div class="catalog__content-title col-12">
+                        <p> Наше меню </p>
+                    </div>
+                    <div class="catalog__content-main col-12">
                     </div>
                 </div>
             </div>

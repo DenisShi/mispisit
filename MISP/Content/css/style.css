@@ -74,12 +74,14 @@ body {
   background-color: #fff;
 }
 
-.header__content {
+.header {
   height: 30vh;
   background: #1abc9c;
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+.header__content {
+  text-align: center;
   color: #fff;
 }
 
@@ -91,17 +93,20 @@ body {
   top: 0;
   z-index: 1;
 }
+.menu__content a {
+  color: white;
+}
 .menu__content-left a {
   float: left;
-  color: white;
   display: block;
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
 }
-.menu__content-right a {
-  float: right;
-  text-align: center;
+.menu__content-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 .menu__content-left a:hover {
   background-color: #ddd;
@@ -144,7 +149,7 @@ body {
   cursor: pointer;
 }
 
-.catalog__title {
+.catalog__content-title {
   text-align: center;
 }
 .footer {

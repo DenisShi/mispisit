@@ -9,12 +9,14 @@
 }
 
 .header {
+    height: 30vh;
+    background: #1abc9c;
+    display: flex;
+    align-items: center;
+
+
     &__content {
-        height: 30vh;
-        background: #1abc9c;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
         color: #fff;
     }
 }
@@ -27,18 +29,22 @@
     top: 0;
     z-index: 1;
 
+    &__content a {
+        color: white;
+    }
+
     &__content-left a {
         float: left;
-        color: white;
         display: block;
         text-align: center;
         padding: 14px 20px;
         text-decoration: none;
     }
 
-    &__content-right a {
-        float: right;
-        text-align:center;
+    &__content-right{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
     }
 
     &__content-left a:hover {
@@ -95,7 +101,7 @@
 
 .catalog {
 
-    &__title {
+    &__content-title {
         text-align: center;
     }
 
