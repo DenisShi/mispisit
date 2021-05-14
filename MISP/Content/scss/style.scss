@@ -115,11 +115,23 @@
     color: #fff;
     height: 8vh;
 
+    .row {
+        height: 100%;
+    }
+
+    &__content {
+        height: 100%;
+    }
+
     &__content-left {
-        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: start;
     }
 
     &__content-right {
-        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
     }
 }

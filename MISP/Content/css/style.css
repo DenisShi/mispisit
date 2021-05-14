@@ -157,11 +157,21 @@ body {
   color: #fff;
   height: 8vh;
 }
+.footer .row {
+  height: 100%;
+}
+.footer__content {
+  height: 100%;
+}
 .footer__content-left {
-  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 .footer__content-right {
-  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */
