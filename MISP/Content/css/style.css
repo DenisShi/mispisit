@@ -103,6 +103,9 @@ body {
   padding: 14px 20px;
   text-decoration: none;
 }
+.menu__navbar-position {
+  padding: 0;
+}
 .menu__content-right {
   display: flex;
   align-items: center;
@@ -115,11 +118,6 @@ body {
 .menu__content-left a.active {
   background-color: #666;
   color: white;
-}
-@media screen and (min-width: 730) {
-  .menu .dropdown {
-    display: none;
-  }
 }
 
 .home_slider {
