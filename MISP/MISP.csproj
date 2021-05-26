@@ -127,10 +127,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Rerository\DbInitializer.cs" />
     <Compile Include="Models\Catalog.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CatalogController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Models\FoodCategory.cs" />
     <Compile Include="Rerository\Context.cs" />
     <Compile Include="Rerository\IRepository.cs" />
     <Compile Include="Rerository\Repository.cs" />
@@ -205,7 +207,9 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\Images\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
