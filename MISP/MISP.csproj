@@ -127,16 +127,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Controllers\ContactController.cs" />
+=======
+    <Compile Include="Rerository\DbInitializer.cs" />
+>>>>>>> 7d42041b54df45c6d32c0d21f5fd17c18c61c314
     <Compile Include="Models\Catalog.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CatalogController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Models\FoodCategory.cs" />
     <Compile Include="Rerository\Context.cs" />
     <Compile Include="Rerository\IRepository.cs" />
     <Compile Include="Rerository\Repository.cs" />
     <Compile Include="Operator.cs" />
-    <Compile Include="Models\CartLine.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\AuthModel.cs" />
     <Compile Include="Models\Enums.cs" />
@@ -209,7 +213,9 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\Images\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

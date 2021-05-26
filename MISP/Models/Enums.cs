@@ -6,13 +6,13 @@ using System.ComponentModel;
 
 namespace MISP
 {
-    public enum FoodCategories
-    {
-        Hotdog,
-        Drink,
-        Shawarma,
-        Other
-    }
+    //public enum FoodCategories
+    //{
+    //    Hotdog,
+    //    Drink,
+    //    Shawarma,
+    //    Other
+    //}
 
     public enum OrderStatuses
     {

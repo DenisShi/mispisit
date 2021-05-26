@@ -3,7 +3,7 @@
   <Class Name="MISP.Product">
     <Position X="8" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAQAgAAAAAAAAAAQAAAAAABAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAACAAAAAQAgAAAAAAAAAIQAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Models\Product.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -60,7 +60,7 @@
     <Position X="11.75" Y="2.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
-      <FileName>Catalog.cs</FileName>
+      <FileName>Models\Catalog.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MISP.AnonUser">
@@ -121,13 +121,6 @@
       <FileName>Models\IProduct.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="MISP.FoodCategories">
-    <Position X="9.5" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>BAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
-      <FileName>Models\Enums.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
   <Enum Name="MISP.OrderStatuses">
     <Position X="9.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>

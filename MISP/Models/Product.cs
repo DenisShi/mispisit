@@ -4,6 +4,7 @@ using System.Web.Services;
 using System.Web.Services.Protocols;
 using System.ComponentModel;
 using System.Drawing;
+using System.Collections.Generic;
 
 namespace MISP
 {
@@ -13,7 +14,7 @@ namespace MISP
         public float Price { get; set ; }
         public string Description { get; set; }
         public int Id { get; set; }
-        public Bitmap Image { get; set; }
-        public FoodCategories Category { get; set; }
+        public string ImagePath { get; set; }
+        public virtual ICollection<FoodCategory> Categories { get; set; }
     }
 }
