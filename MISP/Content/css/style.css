@@ -115,7 +115,7 @@ body {
   background-color: #ddd;
   color: black;
 }
-.menu__content-left a.active {
+.menu__content-left .active {
   background-color: #666;
   color: white;
 }

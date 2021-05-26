@@ -127,6 +127,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Models\Catalog.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CatalogController.cs" />
@@ -155,8 +156,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\AuthUser.cs" />
     <Compile Include="Rerository\UnitOfWork.cs" />
+    <Content Include="Scripts\acticveDropdownItemMenu.js" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Images\temp.jpeg" />
     <Content Include="App_Data\ShawarmaDel.mdf" />
     <Content Include="App_Data\ShawarmaDel_log.ldf">
       <DependentUpon>ShawarmaDel.mdf</DependentUpon>
@@ -197,6 +200,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="web.config" />
+    <Content Include="Views\Contact\Index.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
