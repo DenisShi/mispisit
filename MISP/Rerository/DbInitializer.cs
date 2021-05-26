@@ -26,6 +26,7 @@ namespace MISP.Rerository
                 Id = 1, 
                 ImagePath = $"~/App_Data/Images/temp.jpeg",
                 Name = "Шаурма",
+                Products = new List<Product>() {p1}
             };
             context.FoodCategories.Add(fc1);
             base.Seed(context);

@@ -137,7 +137,6 @@
     <Compile Include="Rerository\IRepository.cs" />
     <Compile Include="Rerository\Repository.cs" />
     <Compile Include="Operator.cs" />
-    <Compile Include="Models\CartLine.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\AuthModel.cs" />
     <Compile Include="Models\Enums.cs" />
