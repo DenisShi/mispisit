@@ -127,16 +127,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CatalogController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Rerository\DbInitializer.cs" />
     <Compile Include="Models\Catalog.cs" />
     <Compile Include="Controllers\CartController.cs" />
-    <Compile Include="Controllers\CatalogController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Models\FoodCategory.cs" />
     <Compile Include="Rerository\Context.cs" />
     <Compile Include="Rerository\IRepository.cs" />
     <Compile Include="Rerository\Repository.cs" />
     <Compile Include="Operator.cs" />
-    <Compile Include="Models\CartLine.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\AuthModel.cs" />
     <Compile Include="Models\Enums.cs" />
@@ -199,6 +200,9 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="web.config" />
+    <Content Include="Views\Catalog\Index.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Cart\ConfirmOrder.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
     <None Include="web.Debug.config">
@@ -208,7 +212,9 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\Images\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
