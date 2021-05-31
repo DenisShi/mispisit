@@ -1,20 +1,13 @@
-﻿$('.dropdown-item').click(function () {
-    let idDropdownItem = this.id
-    localStorage.setItem("idActiveItem", idDropdownItem)
-})
-
-
-$(document).ready(function () {
+﻿$(document).ready(function () {
+    let url_string = window.location.pathname
     let dropdownItems = document.getElementsByClassName('dropdown-item');
-    let idActiveItem = localStorage.getItem('idActiveItem')
     for (let i = 0; i < dropdownItems.length; i++) {
         dropdownItems[i].classList.remove('active');
     }
     for (let i = 0; i < dropdownItems.length; i++) {
-        if (dropdownItems[i].id == idActiveItem) {
+        let item_href = $(dropdownItems[i]).attr('href');
+        if (item_href == url_string) {
             dropdownItems[i].classList.add('active');
         }
     }
-    localStorage.removeItem('idActiveItem')
-
 })

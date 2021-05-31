@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -36,50 +37,55 @@
                             </button>
                             <div class="collapse navbar-collapse" id="nav-content">
                                 <ul class="navbar-nav">
-                                    <li class="nav-item"> <a id="1" class="dropdown-item" href="#">Главная</a> </li>
-                                    <li class="nav-item"> <a id="2" class="dropdown-item" href="#">Акции</a> </li>
-                                    <li class="nav-item"> <a id="3" class="dropdown-item" href="#">Каталог</a> </li>
-                                    <li class="nav-item"> <a id="4" class="dropdown-item" href="/Contact">Контакты</a> </li>
+                                    <li class="nav-item"> <a class="dropdown-item" href="/">Главная</a> </li>
+                                    <li class="nav-item"> <a class="dropdown-item" href="#">Акции</a> </li>
+                                    <li class="nav-item"> <a class="dropdown-item" href="#">Каталог</a> </li>
+                                    <li class="nav-item"> <a class="dropdown-item" href="/Contact">Контакты</a> </li>
                                 </ul>
                             </div>
                         </nav>
                     </div>
                     <div class="menu__content-right col-4">
-                        <a href="#"> <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>  </a>
+                        @if (Session["Cart"] == null){ }
+                        else
+                        {
+                            <a href="/Cart"> <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>  </a>
+                        }
+
+                    </div>
                 </div>
-            </div>
         </header>
     }
 
 
 
-<div class="page">
+    <div class="page">
 
-    @RenderBody()
+        @RenderBody()
 
- 
-    @if (IsSectionDefined("Footer"))
-    {
-        @RenderSection("Footer")
-    }
-    else
-    {
-        <footer class="footer">
-            <div class="footer__content container ">
-                <div class="row">
-                    <div class="footer__content-left col-8">
-                        <p class="lead">Шаурма с душой © 2011-2021</p>
-                    </div>
-                    <div class="footer__content-right col-4">
-                        <i class="fa fa-vk fa-2x" aria-hidden="true"></i>
-                        <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
-                        <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+
+        @if (IsSectionDefined("Footer"))
+        {
+            @RenderSection("Footer")
+        }
+        else
+        {
+            <footer class="footer">
+                <div class="footer__content container ">
+                    <div class="row">
+                        <div class="footer__content-left col-8">
+                            <p class="lead">Шаурма с душой © 2011-2021</p>
+                        </div>
+                        <div class="footer__content-right col-4">
+                            <i class="fa fa-vk fa-2x" aria-hidden="true"></i>
+                            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                            <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-    }
-</div>
+            </footer>
+        }
+    </div>
 
 
     <script src="https://kit.fontawesome.com/0747137cf0.js" crossorigin="anonymous"></script>
@@ -87,5 +93,6 @@
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
     <script src="~/Scripts/dropdowns.js"></script>
     <script src="~/Scripts/acticveDropdownItemMenu.js"></script>
+    <script src="~/Scripts/shopping-cartLogick.js"></script>
 </body>
 </html>
