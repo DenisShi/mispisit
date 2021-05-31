@@ -76,13 +76,18 @@ body {
 
 .header {
   height: 30vh;
-  background: #1abc9c;
+  background: linear-gradient(to bottom left, #ffa500, #a500ff);
   display: flex;
   align-items: center;
 }
 .header__content {
   text-align: center;
   color: #fff;
+}
+.header__content a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bolder;
 }
 
 .menu {

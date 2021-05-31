@@ -8,15 +8,28 @@ namespace MISP.Controllers
 {
     public class CartController : Controller
     {
-        Cart Cart;
-        public ActionResult AddProduct(Product product)
+
+        public ActionResult Index()
         {
-            return null;
+            return View(GetCart().Lines);
         }
 
-        public void Apply()
-        {
+        
 
+        public ActionResult ConfirmOrder()
+        {
+            return View();
+        }
+
+        public Cart GetCart()
+        {
+            Cart cart = (Cart)Session["Cart"];
+            if (cart == null)
+            {
+                cart = new Cart();
+                Session["Cart"] = cart;
+            }
+            return cart;
         }
     }
 
