@@ -12,7 +12,6 @@ namespace MISP.Controllers
         public ActionResult Index()
         {
             ViewBag.Total = GetCart().ComputeTotalValue();
-
             return View(GetCart().Lines);
         }
         public ActionResult ConfirmOrder()
