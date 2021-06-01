@@ -8,9 +8,12 @@ namespace MISP.Rerository
 {
     public class Repository<T> : IRepository<T> where T : class, IDomainObject, new()
     {
-        public Context _context = new Context();
+        private Context _context;
 
-
+        public Repository(Context context)
+        {
+            _context = context;
+        }
         public IEnumerable<T> GetAll()
         {
             return _context.Set<T>();

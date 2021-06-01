@@ -4,17 +4,18 @@ using System.Web.Services;
 using System.Web.Services.Protocols;
 using System.ComponentModel;
 using System.Collections.Generic;
+using MISP.Models;
 
 namespace MISP
 {
     public class Order : IDomainObject
     {
-        public int Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public List<IProduct> Products { get; set; }
-        public DateTime TimeBegin { get; set; }
+        public int Id { get; set; }
+        public ICollection<CartLine> Products { get; set; }
+        public DateTime? TimeBegin { get; set; }
         public DateTime TimeArrival { get; set; }
-        public DateTime TimeDeliver { get; set; }
-        public int Persons { get; set; }
+        public DateTime? TimeDeliver { get; set; }
+        public int? Persons { get; set; }
         public float Cost { get; set; }
 
         public OrderStatuses Status { get; set; }
@@ -27,13 +28,7 @@ namespace MISP
             }
         }
 
-        public IUser Client
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public IUser Client { get; set; }
 
         public void Update()
         {

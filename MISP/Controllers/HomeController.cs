@@ -9,7 +9,6 @@ namespace MISP.Controllers
 {
     public class HomeController : Controller
     {
-        private Context db = new Context();
         public ActionResult Index()
         {
             //Раскомментировать для инициализации БД
