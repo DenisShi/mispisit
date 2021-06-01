@@ -4,33 +4,41 @@
     ViewBag.Title = "Корзина";
 }
 
-<h2>Ваш заказ</h2>
-
-<table class="table">
-
-    @foreach (var item in Model)
-    {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Product.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Quantity)
-        </td>
-        <td>
-            @item.GetCost() Р.
-        </td>
-        <td>
-            @Html.ActionLink("+", "PlusLine", new { id = item.Product.Id })
-        </td>
-        <td>
-            @Html.ActionLink("-", "MinusLine", new { id = item.Product.Id })
-        </td>
-    </tr>
-    }
-
-</table>
-
-<button type="button" onclick="location.href='@Url.Action("ConfirmOrder", "Cart")'">
-    Оформить заказ
-</button>
+<main class="main">
+    <div class="cart">
+        <div class="cart__content container">
+            <div class="row">
+                <div class="cart__content-title col-12 p-5 ">
+                    <h2>Ваш заказ</h2>
+                </div>
+                <div class="cart__content-main col-12">
+                    <table class="table">
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Product.Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Quantity)
+                                </td>
+                                <td>
+                                    @item.GetCost() Р.
+                                </td>
+                                <td>
+                                    @Html.ActionLink("+", "PlusLine", new { id = item.Product.Id })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("-", "MinusLine", new { id = item.Product.Id })
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                    <div class="cart__button-create-order">
+                        <button type="button" onclick="location.href='@Url.Action("ConfirmOrder", "Cart")'"> Оформить заказ </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
