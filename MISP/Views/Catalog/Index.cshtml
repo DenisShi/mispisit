@@ -4,38 +4,48 @@
     ViewBag.Title = "Каталог";
 }
 
-<h2>Каталог</h2>
+<main class="main">
+    <div class="catalog">
+        <div class="catalog__content container">
+            <div class="row">
+                <div class="catalog__content-title col-12 p-5 ">
+                    <h2>Каталог</h2>
+                </div>
+                <div class="catalog__content-main col-12">
+                    <table class="table">
+                        <tr>
+                            <th>
+                                Имя
+                            </th>
+                            <th>
+                                Цена
+                            </th>
+                            <th>
+                                Описание
+                            </th>
+                            <th></th>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Price) Р.
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Добавить", "AddToCart", new { id = item.Id })
 
-<table class="table">
-    <tr>
-        <th>
-            Имя
-        </th>
-        <th>
-            Цена
-        </th>
-        <th>
-            Описание
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price) Р.
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.ActionLink("Добавить", "AddToCart", new { id=item.Id })
-
-        </td>
-    </tr>
-}
-
-</table>
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

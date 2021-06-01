@@ -116,8 +116,35 @@
 
     &__content {
     }
+
 }
 
+.cart {
+
+    &__content-title {
+        text-align: center;
+    }
+
+    &__content {
+    }
+
+    &__button--create-order {
+        text-align: right;
+    }
+}
+.order {
+
+    &__content-title {
+        text-align: center;
+    }
+
+    &__content-input {
+    }
+
+    &__button--confirm-order {
+        text-align: center;
+    }
+}
 
 .footer {
     background-color: #000;

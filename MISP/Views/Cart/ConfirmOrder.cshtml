@@ -3,5 +3,35 @@
     ViewBag.Title = "ConfirmOrder";
 }
 
-<h2>ConfirmOrder</h2>
 
+
+<main class="main">
+    <div class="order">
+        <div class="order__content container">
+            <div class="row">
+                <div class="order__content-title col-12 p-5 ">
+                    <h2>Оформление заказа</h2>
+                </div>
+                <div class="order__content-input col-12">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputAddress2">Имя</label>
+                            <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress2">Телефон</label>
+                            <input type="text" class="form-control" id="inputAddress2" placeholder="+79999999">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress">Адресс</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Красноярск, ул. Булочная, д 4, кв 82">
+                        </div>
+                        <div class="order__button--confirm-order">
+                            <button type="submit" class="btn btn-primary">Заказать</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

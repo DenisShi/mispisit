@@ -160,6 +160,20 @@ body {
 .catalog__content-title {
   text-align: center;
 }
+.cart__content-title {
+  text-align: center;
+}
+.cart__button--create-order {
+  float: right;
+}
+
+.order__content-title {
+  text-align: center;
+}
+.order__button--confirm-order {
+  text-align: center;
+}
+
 .footer {
   background-color: #000;
   color: #fff;
