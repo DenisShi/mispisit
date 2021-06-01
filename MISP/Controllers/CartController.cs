@@ -11,6 +11,7 @@ namespace MISP.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.Total = GetCart().ComputeTotalValue();
             return View(GetCart().Lines);
         }
 
@@ -18,7 +19,8 @@ namespace MISP.Controllers
 
         public ActionResult ConfirmOrder()
         {
-            return View();
+            ViewBag.Total = GetCart().ComputeTotalValue();
+            return View(GetCart().Lines);
         }
 
         public Cart GetCart()
