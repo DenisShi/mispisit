@@ -34,9 +34,17 @@
                             </tr>
                         }
                     </table>
-                    <div class="cart__button-create-order">
-                        <button type="button" onclick="location.href='@Url.Action("ConfirmOrder", "Cart")'"> Оформить заказ </button>
-                    </div>
+                    @if (ViewBag.Total != 0)
+                    {
+                        <p>Общая стоимость: ViewBag.Total Р.</p>
+                        <div class="cart__button-create-order">
+                            <button type="button" onclick="location.href='@Url.Action("ConfirmOrder", "Cart")'"> Оформить заказ </button>
+                        </div>
+                    }
+                    else
+                    {
+                        <p>Ваг заказ пуст</p>
+                    }
                 </div>
             </div>
         </div>
