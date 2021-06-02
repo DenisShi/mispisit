@@ -19,7 +19,7 @@ namespace MISP
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            Database.SetInitializer(new DbInitializer());
+            //Database.SetInitializer(new DbInitializer());
         }
     }
 }

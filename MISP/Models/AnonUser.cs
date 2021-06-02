@@ -3,14 +3,19 @@ using System.Web;
 using System.Web.Services;
 using System.Web.Services.Protocols;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MISP
 {
     public class AnonUser : IUser
     {
-        public string Phone { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Address { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        [Key]
+        [ForeignKey("Order")]
+        public int Id { get; set; }
+        public string Phone { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public Order Order { get; set; }
     }
 }

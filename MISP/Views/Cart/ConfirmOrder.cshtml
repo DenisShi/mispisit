@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<MISP.CartLine>
+
 @{
     ViewBag.Title = "ConfirmOrder";
 }
@@ -10,21 +11,51 @@
         <div class="order__content container">
             <div class="row">
                 <div class="order__content-title col-12 p-5 ">
-                    <h2>Оформление заказа</h2>
+                    <h2>Ваш заказ</h2>
+                </div>
+                <div class="order__content-cart">
+                    <table class="table">
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Product.Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Quantity)
+                                </td>
+                                <td>
+                                    @item.GetCost() Р.
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                    @if (ViewBag.Total != 0)
+                    {
+                        <p>Общая стоимость: @ViewBag.Total Р.</p>
+                    }
+                    else
+                    {
+                        <p>Ваш заказ пуст</p>
+                    }
                 </div>
                 <div class="order__content-input col-12">
-                    <form>
+                    <form method="post">
                         <div class="form-group">
                             <label for="inputAddress2">Имя</label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                            <input type="text" name="name" class="form-control" id="inputName" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="inputAddress2">Телефон</label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="+79999999">
+                            <input type="text" name="phone" class="form-control" id="inputPhone" placeholder="+79999999">
                         </div>
                         <div class="form-group">
                             <label for="inputAddress">Адресс</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Красноярск, ул. Булочная, д 4, кв 82">
+                            <input type="text" name="address" class="form-control" id="inputAddress" placeholder="Красноярск, ул. Булочная, д 4, кв 82">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress2">Персон</label>
+                            <input type="text" name="Persons" class="form-control" id="inputPersons" placeholder="Количество персон">
                         </div>
                         <div class="order__button--confirm-order">
                             <button type="submit" class="btn btn-primary">Заказать</button>

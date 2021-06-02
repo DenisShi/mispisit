@@ -21,12 +21,12 @@ namespace MISP.Rerository
             };
             context.Products.Add(p1);
 
-            FoodCategory fc1 = new FoodCategory() 
-            { 
-                Id = 1, 
+            FoodCategory fc1 = new FoodCategory()
+            {
+                Id = 1,
                 ImagePath = $"~/App_Data/Images/temp.jpeg",
                 Name = "Шаурма",
-                Products = new List<Product>() {p1}
+                Products = new List<Product>() { p1 }
             };
             context.FoodCategories.Add(fc1);
             base.Seed(context);

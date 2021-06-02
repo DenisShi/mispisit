@@ -12,6 +12,10 @@ namespace MISP.Rerository
 
         public DbSet<Product> Products { set; get; }
         public DbSet<FoodCategory> FoodCategories { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<AnonUser> AnonUser { get; set; }
+
+        public DbSet<OrderLine> OrderLines { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -21,6 +25,5 @@ namespace MISP.Rerository
                 .MapRightKey("ProductId")
                 .ToTable("ProductsCategories"));
         }
-
     }
 }

@@ -129,15 +129,15 @@
   <ItemGroup>
     <Compile Include="Controllers\CatalogController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Models\OrderProductRelation.cs" />
     <Compile Include="Rerository\DbInitializer.cs" />
     <Compile Include="Models\Catalog.cs" />
     <Compile Include="Controllers\CartController.cs" />
-    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Models\FoodCategory.cs" />
     <Compile Include="Rerository\Context.cs" />
     <Compile Include="Rerository\IRepository.cs" />
     <Compile Include="Rerository\Repository.cs" />
-    <Compile Include="Operator.cs" />
+    <Compile Include="Models\Operator.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\AuthModel.cs" />
     <Compile Include="Models\Enums.cs" />

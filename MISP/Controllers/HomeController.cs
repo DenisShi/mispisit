@@ -9,17 +9,13 @@ namespace MISP.Controllers
 {
     public class HomeController : Controller
     {
-        private Context db = new Context();
         public ActionResult Index()
         {
             //Раскомментировать для инициализации БД
-            //DbInitializer dbi = new DbInitializer();
-            //dbi.InitializeDatabase(new Context());
+            DbInitializer dbi = new DbInitializer();
+            dbi.InitializeDatabase(new Context());
             
             
-            //ViewBag.Categories = Enum.GetValues(typeof(FoodCategories)).Cast<FoodCategories>().ToList();
-
-            //return View(Enum.GetValues(typeof(FoodCategories)).Cast<FoodCategories>().ToList());
             return View();
         }
 

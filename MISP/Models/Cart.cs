@@ -5,6 +5,7 @@ using System.Web.Services.Protocols;
 using System.ComponentModel;
 using System.Collections.Generic;
 using System.Linq;
+using MISP.Models;
 
 namespace MISP
 {
@@ -39,6 +40,25 @@ namespace MISP
         {
             return Lines.Sum(e => Convert.ToDecimal(e.Product.Price) * e.Quantity);
         }
+
+        public List<Product> GetProducts()
+        {
+            return Enumerable.ToList(from p in Lines select p.Product);
+        }
+
+        public List<OrderProductRelation> GetOrderProductsRelations()
+        {
+            List<OrderProductRelation> opr = new List<OrderProductRelation>();
+            foreach (Product p in GetProducts())
+            {
+                opr.Add(new OrderProductRelation(p));
+            }
+            return opr;
+        }
+        public List<CartLine> GetLines()
+        {
+            return Lines;
+        }
         public void Clear()
         {
             Lines.Clear();
@@ -53,5 +73,6 @@ namespace MISP
         {
             return Product.Price * Quantity;
         }
+
     }
 }
