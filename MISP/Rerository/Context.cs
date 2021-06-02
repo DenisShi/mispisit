@@ -15,6 +15,8 @@ namespace MISP.Rerository
         public DbSet<Order> Orders { get; set; }
         public DbSet<AnonUser> AnonUser { get; set; }
 
+        public DbSet<OrderLine> OrderLines { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<FoodCategory>().HasMany(c => c.Products)

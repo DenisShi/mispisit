@@ -55,14 +55,17 @@ namespace MISP
             }
             return opr;
         }
+        public List<CartLine> GetLines()
+        {
+            return Lines;
+        }
         public void Clear()
         {
             Lines.Clear();
         }
     }
-    public class CartLine : IDomainObject
+    public class CartLine
     {
-        public int Id { get; set; }
         public Product Product { get; set; }
         public int Quantity { get; set; }
 

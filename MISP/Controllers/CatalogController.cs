@@ -24,7 +24,11 @@ namespace MISP.Controllers
         public ActionResult AddToCart(int id)
         {
             using (Context db = new Context())
-                GetCart().AddItem(db.Products.Find(id), 1);
+            {
+                Product pr = db.Products.Find(id);
+                GetCart().AddItem(pr, 1);
+            }
+
             return Redirect("/Catalog");
         }
 

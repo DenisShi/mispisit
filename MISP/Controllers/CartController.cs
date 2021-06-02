@@ -27,7 +27,6 @@ namespace MISP.Controllers
             Order order = new Order()
             {
                 Cost = Convert.ToSingle(GetCart().ComputeTotalValue()),
-                Products = GetCart().Lines,
                 Persons = Convert.ToInt32(persons),
                 Status = OrderStatuses.Created,
                 TimeArrival = DateTime.Now
@@ -39,7 +38,9 @@ namespace MISP.Controllers
                 Address = address,
                 Phone = phone,
                 Order = order
-        };
+            };
+            order.Client = user;
+            order.SetProducts(GetCart().Lines);
             using (Context db = new Context())
             {
                 db.Orders.Add(order);
@@ -59,6 +60,17 @@ namespace MISP.Controllers
                 Session["Cart"] = cart;
             }
             return cart;
+        }
+
+        public ActionResult Test()
+        {
+            Order ord;
+            using (Context db = new Context())
+            {
+                ord = db.Orders.Find(1);
+            }
+
+            return View(GetCart().Lines);
         }
     }
 
